@@ -17,14 +17,15 @@ function init(){
 				busy = true;
 				
 				// set rnd spinningwidth
-				var rnd = (Math.random() % 0.1) + 0.2;
-				updateSiblingsById("col1", {transition: "all " + rnd + "s linear 0s"});
-				updateSiblingsById("col2", {transition: "all " + rnd + "s linear 0s"});
-				updateSiblingsById("col3", {transition: "all " + rnd + "s linear 0s"});
+				var rotationSpeed = (Math.random() % 0.1) + 0.05;
+				var rotationTime = (Math.random() % 1.5) + 1.2;
+				updateSiblingsById("col1", {transition: "all " + rotationSpeed + "s linear 0s"});
+				updateSiblingsById("col2", {transition: "all " + rotationSpeed + "s linear 0s"});
+				updateSiblingsById("col3", {transition: "all " + rotationSpeed + "s linear 0s"});
 				
-				drehen("col1", 1.2, rnd);
-				drehen("col2", 1.5, rnd);
-				drehen("col3", 1.7, rnd);
+				drehen("col1", 1.2, rotationSpeed);
+				drehen("col2", 1.5, rotationSpeed);
+				drehen("col3", 1.9, rotationSpeed);
 			}
 		}
 	});
